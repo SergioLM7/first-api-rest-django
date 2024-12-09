@@ -20,7 +20,7 @@ git clone https://github.com/SergioLM7/first-api-rest-django/
 
 Create a virtual environment:
 ```
-python3 -m venv myenv
+python3 -m venv myenv # En Windows usa python -m venv myenv
 source myenv/bin/activate  # En Windows usa myenv\Scripts\activate
 ```
 
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 Run the server:
 ```
 cd django_rest
-python3 manage.py runserver
+python3 manage.py runserver # En Windows usa python manage.py runserver
 ```
 ## Contact
 
