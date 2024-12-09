@@ -1,0 +1,28 @@
+<h2>Authors</h2>
+<ul>
+    {% for author in authors %}
+        <li>
+            <!-- this URL is built manually -->
+            <a href="{% url 'author-instance' author.id %}">
+                {{ author.first_name }} {{ author.last_name }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+<form action="{% url 'authors' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="first_name" />
+    <input type="text" name="last_name" />
+    <input type="submit" value="Add Author" />
+</form>
+<h2>Books</h2>
+<ul>
+    {% for book in books %}
+        <li>
+            <!-- this URL is built manually -->
+            <a href="{% url 'book-instance' book.id %}">
+                {{ book.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
